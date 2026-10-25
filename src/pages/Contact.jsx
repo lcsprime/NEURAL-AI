@@ -177,7 +177,7 @@ export function Contact() {
                 <textarea
                   id="message"
                   name="message"
-                  rows="7"
+                  rows="5"
                   value={form.message}
                   onChange={update}
                   aria-required="true"

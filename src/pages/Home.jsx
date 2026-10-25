@@ -44,37 +44,43 @@ const practices = [
   {
     num: "01",
     title: "IT strategy and advisory",
-    text: "Technology roadmaps aligned to the business. We audit what is running, say what is not working, and prioritize what actually matters.",
+    text: "What to change, and in what order.",
+    image: "/images/rail-strategy.jpg",
     to: "/capabilities#strategy",
   },
   {
     num: "02",
     title: "Cloud migration and management",
-    text: "A move to AWS, Azure, or Google Cloud on your terms. A clear sequence, a planned cutover, and a look at cost after the move.",
+    text: "A sequenced move onto AWS, Azure, or Google Cloud.",
+    image: "/images/rail-cloud.jpg",
     to: "/capabilities#cloud",
   },
   {
     num: "03",
     title: "Cybersecurity and compliance",
-    text: "The real exposure for your size and your data, closed first. Policy people can follow, and help preparing for SOC 2, HIPAA, or ISO 27001.",
+    text: "The risks that matter for your size and your data.",
+    image: "/images/rail-security.jpg",
     to: "/capabilities#security",
   },
   {
     num: "04",
     title: "Network and infrastructure",
-    text: "Reliable foundations, from the design through procurement, installation, and a handover your operations staff can run.",
+    text: "The network the applications depend on.",
+    image: "/images/rail-network.jpg",
     to: "/capabilities#network",
   },
   {
     num: "05",
     title: "Data and analytics",
-    text: "Pipelines, a warehouse, and dashboards, so the numbers match the systems of record and someone can act on them.",
+    text: "Reporting that matches the systems of record.",
+    image: "/images/rail-data.jpg",
     to: "/capabilities#data",
   },
   {
     num: "06",
     title: "Digital transformation",
-    text: "One workflow, changed until it holds. The rest of the estate stays put until that change is stable.",
+    text: "One workflow, changed until it holds.",
+    image: "/images/rail-change.jpg",
     to: "/capabilities#transformation",
   },
 ];
@@ -88,51 +94,51 @@ const also = [
 const points = [
   {
     title: "Fast to diagnose, careful to build",
-    text: "We get into the systems quickly. The build takes the time it needs to be right.",
+    text: "We get into the systems quickly. The build takes the time it needs.",
   },
   {
     title: "You can see the work",
-    text: "Progress, cost, and a change of plan are said out loud. You are not waiting for a final debrief.",
+    text: "Progress, cost, and a change of plan are said out loud.",
   },
   {
     title: "Outcome first",
-    text: "The measure is what changes for the business, not a stack of slides.",
+    text: "The measure is what changes for the business.",
   },
   {
     title: "Knowledge, not dependency",
-    text: "When we leave, your team should understand and own what was built.",
+    text: "Your team should understand and own what was built.",
   },
 ];
 
 const sectors = [
   {
     title: "Healthcare",
-    text: "Patient data, access, and infrastructure that has to be careful with the record.",
+    text: "Careful systems around the clinical record.",
     to: "/industries#healthcare",
   },
   {
     title: "Financial services",
-    text: "Systems where access, audit, and a failure you can explain are the work.",
+    text: "Access, audit, and the systems around them.",
     to: "/industries#financial-services",
   },
   {
     title: "Manufacturing",
-    text: "The plant floor connected with a designed path for the data, not an open one.",
+    text: "The plant floor, connected without opening it up.",
     to: "/industries#manufacturing",
   },
   {
     title: "Professional services",
-    text: "The tools a firm runs its own delivery on, from records to the work a team repeats.",
+    text: "Tools a firm can run its own delivery on.",
     to: "/industries#professional-services",
   },
   {
     title: "Retail and commerce",
-    text: "Inventory, orders, and the reporting that has to match the transaction.",
+    text: "Inventory, orders, and the path between them.",
     to: "/industries#retail",
   },
   {
     title: "Education and research",
-    text: "Campus systems, identity, and reporting a department can actually afford to run.",
+    text: "Dependable systems on a real budget.",
     to: "/industries#education",
   },
 ];
@@ -161,19 +167,19 @@ export function Home() {
         <div className="wrap">
           <div className="home-lead">
             <h2>Six practice areas. One firm.</h2>
-            <p>
-              We keep the focus on work we can carry from the plan through implementation. Strategy,
-              cloud, security, networks, data, and the change that follows.
-            </p>
+            <p>The work we carry from the plan through implementation.</p>
             <Link to="/capabilities">All capabilities</Link>
           </div>
           <ol className="home-practices">
             {practices.map((item) => (
               <li key={item.num}>
                 <Link to={item.to}>
-                  <span>{item.num}</span>
-                  <strong>{item.title}</strong>
-                  <p>{item.text}</p>
+                  <img src={item.image} alt="" />
+                  <span className="practice-copy">
+                    <span>{item.num}</span>
+                    <strong>{item.title}</strong>
+                    <p>{item.text}</p>
+                  </span>
                 </Link>
               </li>
             ))}
@@ -195,10 +201,7 @@ export function Home() {
         <div className="wrap">
           <div className="home-lead">
             <h2>A firm, not a vendor.</h2>
-            <p>
-              We start from what you actually need, then figure out how to get there, including when
-              the right answer is a tool you already own. The people who scope the work stay on it.
-            </p>
+            <p>We start from what you need. The people who scope the work stay on it.</p>
             <Link to="/company">About the firm</Link>
           </div>
           <div className="home-points">

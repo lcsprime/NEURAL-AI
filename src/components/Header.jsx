@@ -86,7 +86,7 @@ export function Header() {
     <header className="site-header">
       <div className="wrap nav-bar">
         <Link to="/" className="brand" aria-label={`${site.name} home`}>
-          <img className="mark" src="/favicon.svg?v=2" alt="" width="30" height="30" />
+          <img className="mark" src="/favicon.svg?v=3" alt="" width="30" height="30" />
           <span className="brand-name">{site.name}</span>
         </Link>
         <button
